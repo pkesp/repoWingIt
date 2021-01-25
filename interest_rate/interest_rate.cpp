@@ -60,6 +60,9 @@ int main()
         else {
             int totalDay = month * 25;
             for ( int i = 0; i < totalDay; i++ ) {
+		if (i % 20 == 0) {
+                    cout << "================= " << i / 20 + 1 << "번 째 달 =================" << endl;
+                }
                 onegold += (onegold * rate);
                 printf("%d 번째 원금 : %s\n", i + 1, ConvertThousandComma(onegold).c_str());
             }
